@@ -120,7 +120,7 @@ namespace Class_Activity2
 
                         break;
 
-                    case 4:
+                    case 4://///////////////////////////////////////////////////////////////////////////////////////////
                         double input4 = 0;
                         double output4 = 0;
 
@@ -132,7 +132,7 @@ namespace Class_Activity2
                         break;
 
 
-                    case 5:
+                    case 5://///////////////////////////////////////////////////////////////////////////////////////////
                         int input5 = 0;
 
                         Console.WriteLine("Enter a number and the program will determine if it is odd or even");
@@ -149,13 +149,60 @@ namespace Class_Activity2
 
                         break;
 
+                    case 6://///////////////////////////////////////////////////////////////////////////////////////////
+                        // ! function, but for +
+
+                        int input6 = 0;
+                        int subrtact = -2;
+                        int addition = 0;
+
+                        string output6 = "";
+
+                        do
+                        {
+                            isValid = true;
+
+                            Console.WriteLine("Enter a number and the '!' function will be changed from '*' to '+'");
+
+                            try
+                            {
+                                input6 = int.Parse(Console.ReadLine());
+
+                            }
+                            catch (Exception ex)
+                            {
+                                isValid = false;
+
+                            }
+
+                        } while (!isValid);
+
+                        for (int i = 0; i < input6; i++)
+                        {
+                            subrtact++;
+
+                            for (int k = input6 - subrtact - 1; k >= 1; k--)
+                            {
+                                output6 += k + "+";
+                                addition += k;
+                            }
+                        }
+
+                        output6 = output6.Remove(output6.Length - 1, 1);
+
+                        output6 += "=" + addition;
+
+                        Console.WriteLine(output6);
+
+                        break;
+
                     default:
                         Console.WriteLine("Closing");
                         break;
                 }
-            } while ((questionNum < 0) || (questionNum > 5)) ;
+            } while ((questionNum < 0) || (questionNum > 6)) ;
 
-            //adding this line of code for github testing
+
         }
     }
 }
