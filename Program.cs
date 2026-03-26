@@ -168,6 +168,11 @@ namespace Class_Activity2
                             {
                                 input6 = int.Parse(Console.ReadLine());
 
+                                if (input6 == 0)
+                                {
+                                    isValid = false;
+                                }
+
                             }
                             catch (Exception ex)
                             {
